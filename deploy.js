@@ -1,3 +1,5 @@
+const dotenv = require('dotenv').config()
+const fetch = require('node-fetch')
 const deployURL = process.env.deployURL
 
 if (deployURL) {
