@@ -1,26 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Route, Switch} from "react-router-dom";
+import Landing from './Landing';
+import Pets from './Pets';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Route exact path = "/" component={Landing} />
+      <Route exact path = "/pets" component={Pets} />
     </div>
   );
 }
 
 export default App;
+
+// class App extends Component {
+// state = {
+//   showLanding: true,
+// }
+
+// routes () {
+//   return (
+//     <>
+//       <Route exact
+//   )
+// }
+// <Router>
+// </Router>
+
+ 
+
+// handleViewButtonClick = (e) => {
+//   e.preventDefault()
+//   this.setState({showLanding: false})
+
+// }
+
+// render() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//       <Landing viewButton={this.handleViewButtonClick} />
+//       <Pets cats={this.cats} dogs={this.dogs}/>
+//         <a>
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+// }
